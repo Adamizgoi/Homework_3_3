@@ -19,7 +19,8 @@ public class CreditPaymentService {
             boolean creditRight = true;
         } else {
             result = 0;
-        } if (years == minYears || years == middleYears || years == maxYears) {
+        }
+        if (years == minYears || years == middleYears || years == maxYears) {
             result = (int) (creditTotal * (monthPercent / (1 - Math.pow(1 + monthPercent, -monthsLast))));
         } else {
             result = 0;
